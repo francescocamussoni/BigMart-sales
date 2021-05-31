@@ -5,6 +5,7 @@
 Using this model, BigMart will try to understand the properties of products and stores which play a key role in increasing sales."
 
 You can find the data set [here](www.kaggle.com%2Fbrijbhushannanda1979%2Fbigmart-sales-data)
+
 You can check my post on Medium [here](https://medium.com/p/2301935c0948)
 
 ## Attributes
