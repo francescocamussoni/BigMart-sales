@@ -24,4 +24,4 @@ You can check my post on Medium [here](https://medium.com/p/2301935c0948)
 
 ## Files
 On BigMart-sales.ipynb you can find the general code where I explored the attributers and train a LightGBM classifier.
-On Preprocessing-function.pu you can find the function that I used to realize all the preprocessing that I explored on the previous file.
+On Preprocessing-function.py you can find the function that I used to realize all the preprocessing that I explored on the previous file.
