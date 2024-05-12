@@ -1,4 +1,4 @@
-def StandarScaler(x_train, x_test):
+def standar_scaler(x_train, x_test):
     '''
     Standar scaler
   
@@ -140,11 +140,11 @@ def ValueGrouper(Serie, group, value):
     for g in group:
         Serie = Serie.replace(g, value)
 
-def LogTransform(x):
+def log_transform(x):
     '''
     Logarithmic space transform function. 
     '''
-    return np.log(x+1)
+    return np.log(x + 1)
 
 def LogAntitransform(x):
     '''
