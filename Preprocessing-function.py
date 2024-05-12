@@ -146,11 +146,11 @@ def log_transform(x):
     '''
     return np.log(x + 1)
 
-def LogAntitransform(x):
+def log_antitransform(x):
     '''
     Anti-logarithmic space transform function. 
     '''
-    return np.exp(x)-1
+    return np.exp(x) - 1
 
 def predict(model, antitransform, x):
     return antitransform(model.predict(x))
