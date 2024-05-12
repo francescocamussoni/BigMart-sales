@@ -23,7 +23,7 @@ def standar_scaler(x_train, x_test):
     x_test = (x_test-u) / s
     return x_train, x_test
 
-def RobustScaler(x_train, x_test):
+def robust_scaler(x_train, x_test):
     '''
     Robust scaler
   
@@ -42,11 +42,11 @@ def RobustScaler(x_train, x_test):
       Scaled x_test.
      '''
     
-    m = x_train.median() #escaleo con los datos de train
-    p25 = x_train.quantile(0.25) #escaleo con los datos de train
-    p75 = x_train.quantile(0.75) #escaleo con los datos de train
-    x_train = (x_train-m)/(p75-p25)
-    x_test = (x_test-m)/(p75-p25)
+    m = x_train.median()  # escaleo con los datos de train
+    p25 = x_train.quantile(0.25)  # escaleo con los datos de train
+    p75 = x_train.quantile(0.75)  # escaleo con los datos de train
+    x_train = (x_train-m) / (p75-p25)
+    x_test = (x_test-m) / (p75-p25)
     return x_train, x_test
 
 def MeanImputer_NA(data, data_t, atr, atr_filter):
