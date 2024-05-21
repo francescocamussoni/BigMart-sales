@@ -1,4 +1,4 @@
-def standar_scaler(x_train, x_test):
+def StandarScaler(x_train, x_test):
     '''
     Standar scaler
   
@@ -17,13 +17,13 @@ def standar_scaler(x_train, x_test):
       Scaled x_test
      '''
         
-    u = x_train.mean()  # escaleo con los datos de train
-    s = x_train.std()  # escaleo con los datos de train
-    x_train = (x_train-u) / s
-    x_test = (x_test-u) / s
+    u = x_train.mean() #escaleo con los datos de train
+    s = x_train.std() #escaleo con los datos de train
+    x_train = (x_train-u)/s
+    x_test = (x_test-u)/s
     return x_train, x_test
 
-def robust_scaler(x_train, x_test):
+def RobustScaler(x_train, x_test):
     '''
     Robust scaler
   
@@ -42,11 +42,11 @@ def robust_scaler(x_train, x_test):
       Scaled x_test.
      '''
     
-    m = x_train.median()  # escaleo con los datos de train
-    p25 = x_train.quantile(0.25)  # escaleo con los datos de train
-    p75 = x_train.quantile(0.75)  # escaleo con los datos de train
-    x_train = (x_train-m) / (p75-p25)
-    x_test = (x_test-m) / (p75-p25)
+    m = x_train.median() #escaleo con los datos de train
+    p25 = x_train.quantile(0.25) #escaleo con los datos de train
+    p75 = x_train.quantile(0.75) #escaleo con los datos de train
+    x_train = (x_train-m)/(p75-p25)
+    x_test = (x_test-m)/(p75-p25)
     return x_train, x_test
 
 def MeanImputer_NA(data, data_t, atr, atr_filter):
@@ -140,17 +140,17 @@ def ValueGrouper(Serie, group, value):
     for g in group:
         Serie = Serie.replace(g, value)
 
-def log_transform(x):
+def LogTransform(x):
     '''
     Logarithmic space transform function. 
     '''
-    return np.log(x + 1)
+    return np.log(x+1)
 
-def log_antitransform(x):
+def LogAntitransform(x):
     '''
     Anti-logarithmic space transform function. 
     '''
-    return np.exp(x) - 1
+    return np.exp(x)-1
 
 def predict(model, antitransform, x):
     return antitransform(model.predict(x))
