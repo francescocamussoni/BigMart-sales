@@ -136,11 +136,18 @@ def ValueGrouper(Serie, group, value):
     for g in group:
         Serie = Serie.replace(g, value)
 
-def LogTransform(x):
+def log_transform(x):
     '''
     Logarithmic space transform function. 
+
+    Parameters:
+        x (np.ndarray): array a sobre el cual calcular la transformacion logaritmica
+
+    Returns
+    -------
+        (np.ndarray): array transformado
     '''
-    return np.log(x+1)
+    return np.log(x + 1)
 
 def LogAntitransform(x):
     '''
