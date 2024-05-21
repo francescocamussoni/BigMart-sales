@@ -1,26 +1,26 @@
-def StandarScaler(x_train, x_test):
+def santandar_scaler(x_train, x_test):
     '''
     Standar scaler
-  
+
     Parameters
     ----------
-    x_train : pandas.dataframe
+    x_train (numpy.ndarray): pandas.dataframe
       The training dataframe to scale.
-    x_test : pandas.dataframe
+    x_test (numpy.ndarray): pandas.dataframe
       The validaiton/test dataframe to scale
 
     Returns
     -------
-    x_train : pandas.dataframe
+    x_train (numpy.ndarray): pandas.dataframe
       Scaled x_train
-    data_t : pandas.dataframe
+    x_test (numpy.ndarray): pandas.dataframe
       Scaled x_test
      '''
-        
-    u = x_train.mean() #escaleo con los datos de train
-    s = x_train.std() #escaleo con los datos de train
-    x_train = (x_train-u)/s
-    x_test = (x_test-u)/s
+
+    u = x_train.mean()  # escaleo con los datos de train
+    s = x_train.std()  # escaleo con los datos de train
+    x_train = (x_train-u) / s
+    x_test = (x_test-u) / s
     return x_train, x_test
 
 def RobustScaler(x_train, x_test):
